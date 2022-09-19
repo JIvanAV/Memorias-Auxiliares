@@ -1,0 +1,99 @@
+Resumo da Sintaxe Python
+    legenda do resumo:
+        ||      representa um termo qualquer (apenas ilustração)
+        ->      representa uma seta
+
+===================================================> PROGRAMAÇÃO ESTRUTURADA: <==================================================
+
+Comentários:
+    #|conteúdo|                     '''
+                                    |conteúdo de linhas múltiplas|
+                                    '''
+
+Declaração de variáveis:                        Input e Output no Terminal:
+    |nome| = |valor| -> exemplo: x = 10             print(|valor|)  -> "|...| {} |...|".format(|valor|)
+                                                    input(|string|)
+
+Tipos primitivos:                               Coleções:
+    int:    10, 1, -1                               Listas:      |nome| = [|termo1|, |termo2|, ...]
+    float:  10.0, 1.5, -1.0                         Tuplas:      |nome| = (|termo1|, |termo2|, ...)
+    bool:   true, false                             sets:        |nome| = {|termo1|, |termo2|, ...}
+    string: "ABC", "10", "1"                        Dicionários: |nome| = {|termo1| : |valor1|
+                                                                            |termo2| : |valor2|
+                                                                            ... }
+
+Operadores aritiméticos:                        Sinais condicionais:
+    +   soma                                        ==  igual à 
+    -   subtração                                   >   maior que
+    *   multiplicação                               <   menor que
+    **  exponenciação                               >=  maior igual à
+    /   divisão                                     <=  menor igual à
+    //  divisão arredondada                         !=  diferente de
+    %   resto da divisão
+
+    round() arredonda para cima valores float
+
+Condicionais:
+    if |condição| :             elif |condição| :         else :
+           |código|                    |código|                  |código|
+
+Laços:
+    while |condição|:           for |variável| in range (|start|,|stop|,|Step|):
+        |código|                    |código|
+
+Manipulação de listas:
+    |nomeLista|[|posição|] = |valor|    -> [|p1|:|p2|]  => : retorna todos os valores em diante ...
+    |nomeLista|.append(|valor|)                              ... (antes de p2 ou depois de p1).
+    |nomeLista|.insert(|valor|,|posição|)
+    len(|nomeLista|)
+    |nomeLista|.remove(|posição|)
+    list (|tupla|)
+
+Manipulação de Strings:
+    |nomeStr|[|posição|] = |valor|    -> [|p1|:|p2|]  => : retorna todos os valores em diante ...
+    |nomeStr|.len()                                        ... (antes de p2 ou depois de p1).
+    |nomeStr|.count(|valor|)
+    |nomeStr|.find(|valor|)
+    |nomeStr|.replace(|valor1|,|valor2|)
+
+Manipulação de tuplas:
+    |nomeTupla|.count(|valor|)
+    |nomeTupla|.index(|posição|)
+    |valor| in |nomeTupla|              -> false se não houver o valor na tupla e true se houver
+    tuple (|lista|)
+
+Tratamento de erros:
+    try:
+        |comandos|
+    except |tipo do erro|:      -> |Exception as error| no tipo do erro cria um erro genérico
+        |comandos|
+
+Manipulação de arquivos:
+    |nomeArq| = open (|caminho|,|chave|)    -> chaves: 
+    |nomeArq|.write(|valor|)                    'r'  leitura
+    |nomeArq|.writelines(|coleção|)             'w'  escrita (substitui se o arquivo já existe)
+    |nomeArq|.readline                          'x'  escrita (retorna erro caso o arquivo já exista)
+    |nomeArq|.readlines()                       'a'  escrita (adiciona o conteúdo na linha abaixo)
+    |nomeArq|.close()                           'b'  modo binário
+                                                't'  modo de texto (padrão)
+                                                '+'  atualizar
+
+Importações de bibliotecas:                     Funções:
+    #import |biblioteca|                            def |nome| (|parametro1|,|parametro2|, ...):
+    #from |biblioteca| import |método|                  |código|
+
+===============================================> PROGRAMAÇÃO ORIENTADA À OBJETOS: <==============================================
+
+Classes:                                        Construtores:
+    Class |Nome|:                                   def __init__ (self, |var1|: |tipo|, |var2|: |tipo|, ...)
+        |código|                                        self.|var1| = |var1|            => atributo 1
+                                                        self.|var2| = |var2|            => atributo 2
+                                                        ...                             => atributos n
+
+Métodos:                                        Herança:
+    def |nome|(self, |parâmetros : tipo|)           class |NomeClasseFilha| ( |NomeClasseMãe| ):
+                                                        |código|    => A classse Filha herda os ...
+                                                                       ... atributos da classe Mãe
+
+Polimorfismo:
+    ...
