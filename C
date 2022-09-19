@@ -1,0 +1,212 @@
+É necessário começao o código com as importações utilizando o #include.
+#include <stdio.h> 	  - funções de saída e entrada 
+#include <stdlib.h> 	- funções e constantes básicas
+#include <locale.h> 	- acentos
+#include <stdbool.h> 	- usar valores booleanos
+#include <string.h>	  - usar funções de strings
+
+
+Define-se uma função para iniciar o código.
+-Tipo da função- main () {
+	-código-
+	return
+}
+Ps: A função pode possuir tipos e retornar valores equivalentes a esse tipo como void e int.
+
+
+Define-se as variáveis, já indicando o seu tipo de variável.
+-tipo de variável- var1 , var2 , varN ;
+
+
+Depois de cada linha de código é necessário colocar um “;”.
+
+
+setlocale(LC_ALL" -str-"):  - Faz o programa ter acentos. É colocado antes da linha que possui o acento.
+
+
+-Escrever um texto:
+printf("Quero jogar Elder Ring") ;
+
+
+-Escrever o valor de uma variável:
+printf("%d" , variável) ; - O %d se refere à números inteiros.
+- Algumas ações diferentes do print:
+
+
+-Pular uma linha:
+printf("Quero jogar Elder Ring \n");
+
+
+Receber um valor:
+scanf ("%d" , &variável); - O %d se refere à números inteiros. Pode ser substituído dependendo do tipo da variável.
+
+
+Exemplos de tipos de variáveis:
+int 	- números inteiros 		- %i
+long int	- números inteiros extensos	- %i
+float	- números decimais		- %f
+double - números decimais grandes	- %lf
+char      - caracteres			- %c
+string    - cadeia de caracteres	- %s
+bool      - Valores booleanos		- %
+
+%x	- Valores hexadecimais
+%o	- Valores octais
+%d	- Valores na base 10
+%f	- Valores decimais (até 6 casas, arredondando o último)
+%e	- Valores em notação científica
+%g	- Valores decimais (até 3 casas, sem arredondar o último)
+%a	- Valores em notação científica (com vírgula)
+%.xf	- Valores decimais (até x casas, arredondando o último)
+
+-Obs: utiliza-se aspas ao utilizar valores char.
+
+Pode-se adicionar anteriormente a declaração da variável algumas restrições, como:
+unsigned - limita a variável a possuir apenas valores negativos
+constant - cria uma variável que não pode ser modificada
+
+
+fflush(stdin)  -  Limpar valores temporários (lixo do buffer). É colocado antes de declarar a variável. stdin se refere à entrada principal, que é onde o buffer está. É utilizado quando for utilizar variáveis char.
+abs( var ) ; - dá um valor absoluto de números inteiros (equivalente à modulo).
+
+
+Operações aritméticas:
++	soma ou concatenação
+-	subtração
+*	multiplicação
+/	divisão
+%	resto da divisão
+=	atribuição
+Ps: usar var = var + 1 é a mesma coisa que usar var++. Isso também é válido para outros operadores como a subtração.
+
+
+Casting: Algumas operações em C são feitas de forma que os tipos de variáveis importam, por exemplo: ao dividir um número inteiro 16 por um número inteiro 3, o programa retornará um número flutuante 5.000. Para consertar isso, pode-se fazer a seguinte operação:
+	(float)
+			-Pode se utilizar (int), (char), (float) …
+
+
+comentários são feitos utilizando \\-comentário-
+
+- Condicionais:
+if (condição) {
+	 -código-
+if else (condição) {
+	-código-
+} else {
+	-código-
+}
+
+switch ( ) {
+	case condição :
+		-código-
+		break
+	case condição2 :
+		-código-
+		break
+	default:
+		-código-
+	 	break
+}
+
+
+- Relações de comparação:
+==  	igual à
+> 	maior que
+< 	menor que
+>= 	maior igual à
+<= 	menor igual à
+!= 	diferente de
+! 	não (Inverte a condicional à seguir)
+?	se a condição passada for verdadeira, faça isso, senão, faça isso.
+
+obs: sintaxe “?”: Irá printar sim, mas se num2 for > num1, printará nao
+
+
+- Para adicionar condições ao IF, se utiliza:
+AND - &&
+OR    - ||
+- Gerar valores aleatórios:
+rand()
+
+
+- Laços de repetição:
+while (condição) {
+	-código-
+	-pode utilizar o comando break-
+}
+Ps: o while simples primeiro verifica a condição e depois executa as linhas de código.
+
+do {
+	-código-
+} while (condição ) ;
+Ps: o do+while primeiro executa as linhas de código depois confere a condição.
+
+for(-váriavelContador- ; -condição- ; operação){
+	-código-
+}
+
+
+#define -CONSTANTE- -valor-
+Ps: cria valores que são constantes (Não mudam), sendo similares as variáveis, só que imutáveis. Normalmente as constantes são escritas inteiramente em letras maiúsculas.
+
+
+- Vetores (Arrays): São variáveis que possuem vários valores (semelhantes às listas do python).
+são definidos assim: -tipo do vetor- -vetor- [-número de espaços de valores] (bem parecido com a definição de variáveis, mudando apenas a presença do colchete). Para usar os valores do vetor, utilizasse: -nome do vetor- [posição] = valor (atentar que para posição inicial que é 0).
+
+
+Strings: são cadeias de caracteres. São definidas iguais aos vetores, porém utiliza o tipo char para ser definida e depois utiliza-se colchetes para definir seu tamanho. char -nomeSTR- [tamanho]
+
+
+fgets(-nome da string- , -tamanho da string- , stdin); 	- lê a string
+
+
+strlen(-nome da string-) 	- vê o tamanho da string
+
+
+Ps: Para limpar os espaços que não foram declarados mas não foram ocupados pode-se utiliza o código:
+-nomeString-[strlen(-nomeString-)-1] = ‘\o’;
+
+
+Matrizes: São vetores dentro de vetores. Os elementos são acessados da seguinte maneira:
+	-nomeMatriz- [posiçãodoVetor1] [posiçãodoVetor2]	-Considerar que o Vetor2 está
+								dentro do Vetor1
+
+
+sprintf(-string-, "%d", -número-); -converte números inteiros na variável string fornecida
+
+
+- Declarar funções:
+As variáveis dentro da função só existem dentro da função e são chamadas variáveis locais. Mas ao utilizar o static, o valor da variável pode ser armazenado.
+	ps: local automatica é a variável local e a estatica, a estática.
+Existem também as variáveis Globais que existem dentro e fora da função (em todas as funções). E para ficar mais fácil a legibilidade do comando, adiciona-se um ‘g’ no início do nome da variável. Para declarar uma variável global basta criar uma variável fora das funções (incluindo a main).
+
+
+Funções podem também chamar outras funções, inclusive elas mesmas (função recursiva).
+
+
+Para chamar os termos:
+		printf(“%i:%i:%i\n”, agora.horas , agora.minutos, agora.segundos);
+
+
+- Strings: São cadeias de caracteres, similares aos vetores.
+char palavra[7] = {‘B’ , ‘r’, ‘a’, ‘s’, ‘i’, ‘l’} ;
+char palavra[] = {‘B’ , ‘r’, ‘a’, ‘s’, ‘i’, ‘l’} ;
+char palavra[7] = {“Brasil”} ;
+char palavra[] = {“Brasil”} ;
+char palavra[] = “Brasil” ;
+(PS: Todas as strings possuem um valor nulo no final, portanto a quantidade total de seus elementos possuem 1 extra em sua declaração)
+(Ps2: Se utiliza o %s para referenciar)
+Para receber caracteres do usuário, utiliza-se o fgets, que é similar ao scanf.
+	
+ 
+-Verificando elementos de string:
+
+
+- Ponteiros: é o endereço na memória do computador do valor de uma variável declarada no código.
+ saída: 10 (valor da variável)
+saída: 215637 (endereço da memória)
+desse modo alocamos o ponteiro ao espaço de memória do endereço da variável x de modo que a saída do código abaixo será igual a saída deste de cima (obs: o & representa o endereço de memória da variável ao lado):
+		(saída 10)
+		e desta forma será igual ao endereço da memória:
+					
+(Ps: reparar na utilização dos asteriscos * que serve para declarar que o termo escolhido é um ponteiro respectivo à algum endereço de memória).
