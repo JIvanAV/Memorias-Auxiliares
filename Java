@@ -1,0 +1,137 @@
+Memória Auxiliar Java
+
+Programação Estruturada:
+
+
+Definir Classes:
+<Modificador de Acesso> class <Nome> {
+Código ;
+return <Item> ;
+}
+
+
+
+Definir Métodos (Funções):
+<Modificador de Acesso>  <static> <tipo> <nome>	(  parâmetros	)	{	Código		}
+
+
+
+Imprimir algo na tela (PRINT):
+System.out.print ( <conteúdo> ) ;
+
+
+
+Receber informações pelo teclado (INPUT):
+Scanner <nome> = new Scanner (System.in);
+	<variável> = <nome>.next<tipo da variável> () ;
+
+
+
+Condicionais IF , ELSE IF , ELSE:
+	if (<condição>) {	Código       }
+	else if (<condição>) {	      Código       }
+	else {	      Código       }
+
+
+
+Condicionais SWITCH CASE:
+	switch ( <variável> ) {
+		case <valor> :S
+			<Código> ;
+break ;
+		default: <Código>
+
+
+
+Laço WHILE:
+while ( <condição> )	{	Código		}
+
+
+
+Laço DO WHILE:
+	do {	Código	     } while ( <condição> ) ;
+
+Mesma coisa que o while, mas ao contrário do while, o comando primeiro executa a linha de código para posteriormente verificar  a condição.
+
+
+
+Laço FOR:
+for (int i = 0 ; <condição> ; <incremento>) {		Código		}
+
+
+
+ARRAYS:
+	<tipo> <nome>[] = new <tipo> [ <tamanho do array> ] ;
+
+Para se referenciar a um termo, utiliza-se <nome>[posição do termo];
+Para criar um array com mais de uma dimensão, adiciona-se [] na declaração.
+
+
+
+Strings:
+	Java Strings (Fodase)
+
+
+
+JOptionPane:		 import javax.swing.JOptionPane;
+	Mostrar algo na tela:
+		JOptionPane.showMensageDialog(null, <Valor>,<nome da janela>, <ícone>);
+
+	Entrada de valores:
+		String <variável> = JOptionPane.showInputDialog(null, String);
+		int <variável> = Integer.parseInt( JOptionPane.showInputDialog(null, String); )
+
+
+Programação Orientada a Objetos:
+
+
+Conceitos (Teoria):
+Classes: É um “Blueprint” e uma coleção de objetos;
+Objetos: Qualquer entidade que tenha estado e comportamento é conhecida como um objeto;
+Atributos: Diz respeito às características do objeto;
+Métodos: Diz respeito aos comportamentos que um objeto tem ou realiza;
+Herança: Quando um objeto herda propriedades de um “Objeto Pai”;
+Polimorfismo: Quando uma tarefa (Método) é executada de maneiras diferentes;
+Abstração: Ocultar detalhes internos e mostrar funcionalidade;
+Encapsulamento: Vincular (ou agrupar) código e dados em uma única unidade, padronizando e protegendo o código;
+Acoplamento: Acoplamento refere-se ao conhecimento, informação ou dependência de outra classe.
+Coesão: Coesão refere-se ao nível de um componente que executa uma única tarefa bem definida.
+Associação: Representa o relacionamento entre os objetos. Elas podem ser:
+Um a um;
+Um para muitos;
+Muitos para um;
+Muitos para muitos.
+
+
+
+Definir Classes:
+<Modificador de Acesso> class <Nome> {
+Código ;
+return <Item> ;
+}
+
+
+
+Definir um objeto:
+	<nome> = new <classe>;
+	<nome>.atributo = <valor>;
+
+
+
+Métodos Getters (Assessores): Servem se referir a atributos sem fazer isso diretamente.
+	public  <tipo>  get<Atributo> (){return this.<Atributo>;}
+	para chamar o método: <variável>.get<atributo>().
+
+
+
+Métodos Setters (Modificadores): Servem para modificar atributos sem fazer isso diretamente.
+	public void set<Atributo> (<tipo> <variável>){ this.<Atributo> = <variável>;}
+	para chamar o método: <variável>.set<atributo>(<valor>).
+
+
+
+Métodos construct (Construtores): Serve para dar características iniciais ao objeto gerado.
+	public <Classe> (<tipo> <variável> , …) {
+        		this.<Atributo> = <variável>;
+		…
+    	}
