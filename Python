@@ -19,8 +19,8 @@ Tipos primitivos:                               Coleções:
     float:  10.0, 1.5, -1.0                         Tuplas:      |nome| = (|termo1|, |termo2|, ...)
     bool:   true, false                             sets:        |nome| = {|termo1|, |termo2|, ...}
     string: "ABC", "10", "1"                        Dicionários: |nome| = {|termo1| : |valor1|
-                                                                            |termo2| : |valor2|
-                                                                            ... }
+                                                                           |termo2| : |valor2|
+                                                                           ... }
 
 Operadores aritiméticos:                        Sinais condicionais:
     +   soma                                        ==  igual à 
